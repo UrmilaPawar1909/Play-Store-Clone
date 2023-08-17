@@ -1,20 +1,16 @@
-.logo-img{
-    height: 70px;
-    /* width: 50px; */
+ .navbar-nav{
+    margin-top: 20px;
+    margin-left: 10px;
 }
-
-brand-name{
-    font-family:'sans-serif';
+.d-flex{
+   margin-inline-start: 200px;
 }
-
-.search-img{
-    height: 20px;
+.form-control{
+   width: 400px;
+   height: 50px;
+   border-radius: 10px;
 }
-
-.user-img{
-    height: 25px;
-}
-
-.nav-container{
-    margin-left: 850px;
+#logo{
+   margin-inline-start: 60px;
+   margin-bottom: 8px;
 }
