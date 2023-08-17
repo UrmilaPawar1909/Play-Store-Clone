@@ -1,0 +1,37 @@
+.youtube-img:hover {
+    background-color: #dfdfe2;
+    border-radius: 50%;
+}
+
+.search-bar {
+    margin: 2px;
+    padding: 4px;
+    border-radius: 20px;
+    height: 40px;
+    margin-left: 160px;
+    border: 1px solid #eeeef0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.search-bar:hover {
+    border-color: blue;
+}
+
+.mic-img {
+    background-color: #eeeef0;
+    border-radius: 50%;
+    border-color: #ddd;
+}
+
+.mic-img:hover {
+    border-radius: 50%;
+    background-color: #dfdfe2;
+}
+
+.nav-name-design {
+    color: dimgray;
+}
+
+.nav-name-design:hover {
+    color: black;
+}
