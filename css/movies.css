@@ -1,0 +1,20 @@
+.logo-img{
+    height: 70px;
+    /* width: 50px; */
+}
+
+brand-name{
+    font-family:'sans-serif';
+}
+
+.search-img{
+    height: 20px;
+}
+
+.user-img{
+    height: 25px;
+}
+
+.nav-container{
+    margin-left: 850px;
+}
