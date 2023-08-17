@@ -1,0 +1,16 @@
+ .navbar-nav{
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.d-flex{
+   margin-inline-start: 200px;
+}
+.form-control{
+   width: 400px;
+   height: 50px;
+   border-radius: 10px;
+}
+#logo{
+   margin-inline-start: 60px;
+   margin-bottom: 8px;
+}
