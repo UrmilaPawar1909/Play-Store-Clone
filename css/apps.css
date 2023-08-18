@@ -1,0 +1,68 @@
+.youtube-img:hover {
+    background-color: #dfdfe2;
+    border-radius: 50%;
+}
+
+.search-bar {
+    margin: 2px;
+    padding: 4px;
+    border-radius: 12px;
+    height: 45px;
+    margin-left: 125px;
+    border: 1px solid darkgrey;
+    font-family: 'Roboto', sans-serif;
+}
+
+.search-bar:hover {
+    border-color: blue;
+}
+
+.search-img {
+    margin-left: 210px;
+    margin-left: 55px;
+}
+
+.search-img:hover {
+    border-radius: 50%;
+    background-color: #dfdfe2;
+}
+
+.questionMark-img {
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+.questionMark-img:hover {
+    border-radius: 50%;
+    background-color: #dfdfe2;
+}
+
+.user-profile {
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+.Headings {
+    margin-left: 30px;
+}
+
+.grid-container {
+    margin-left: 10px;
+    margin-right: 10px;
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+    grid-template-columns: auto auto auto auto;
+}
+
+.product {
+    text-align: center;
+    border: 2px solid gray;
+    border-radius: 40px;
+}
+
+.product img {
+    border-radius: 40px;
+    width: 180px;
+    height: 180px;
+}
