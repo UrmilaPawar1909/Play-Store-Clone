@@ -41,28 +41,3 @@
     border-radius: 50%;
     margin-left: 20px;
 }
-
-.Headings {
-    margin-left: 30px;
-}
-
-.grid-container {
-    margin-left: 10px;
-    margin-right: 10px;
-    align-items: center;
-    display: flex;
-    justify-content: space-evenly;
-    grid-template-columns: auto auto auto auto;
-}
-
-.product {
-    text-align: center;
-    border: 2px solid gray;
-    border-radius: 40px;
-}
-
-.product img {
-    border-radius: 40px;
-    width: 180px;
-    height: 180px;
-}
