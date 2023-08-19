@@ -41,3 +41,12 @@
     border-radius: 50%;
     margin-left: 20px;
 }
+
+.details {
+    display: flex;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+}
