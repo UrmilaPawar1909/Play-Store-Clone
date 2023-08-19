@@ -1,4 +1,8 @@
- .navbar-nav{
+*{
+   margin: 0;
+   padding: 0;
+}
+.navbar-nav{
     margin-top: 20px;
     margin-left: 10px;
 }
