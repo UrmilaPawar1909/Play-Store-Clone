@@ -1,9 +1,757 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Plat Store Clone</title>
-    </head>
-    <body>
-        
-    </body>
+<html lang="en">
+<head>
+    <title>Game page</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="
+        sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+      <link href="/css/game.css" rel="stylesheet">
+</head>
+<body>
+           <!--Navbar section-->
+  <nav class="navbar navbar-expand-lg sticky-top bg-body-tertiary position-steeky" data-bs-theme="lite">
+    <div class="container-fluid">
+        <img src="/img/google_playstore_logo-removebg-preview.png" class="logo" height="50" width="200">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ">
+                <li class="nav-item">
+                    <a class="nav-link active" href="/pages/games.html">Games</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="/pages/apps.html">Apps</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/pages/movies.html">Movies</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="/pages/books.html">Books</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="/pages/kids.html">Children</a>
+                </li>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2 ms-5 " type="search" placeholder="Search" aria-label="Search">
+                    <img src="/img/search.png" height="36" width="36">
+                </form>
+                <div>
+                  <a href="/pages/signin.html"><img src="/img/account.png" id="logo" height="55" width="55"></a>
+                </div>
+
+            </ul>
+        </div>
+    </div>
+</nav>          
+
+                       <!--Image auto-slider section-->
+      <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./../img/game-image/free fire.jpg" class="d-block w-100">
+          </div>
+          <div class="carousel-item">
+            <img src="./../img/game-image/bgmihd.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./../img/game-image/avatar-frontiers.jpeg" class="d-block w-100 " alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      
+      <h3>Featured games</h3>
+      <p>Google Play Games on PC</p>
+                         <!--video section-->
+      <div id="carouselExampleFade3" class="carousel slide carousel-fade">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container">
+              <div class="row">
+                  <div class="col-lg-4 mt-5">
+                    <div class="embed-responsive embed-responsive-16by9">
+                      <iframe width="350" height="200" src="https://www.youtube.com/embed/JzpZ0_WjgwQ" title="YouTube video player" frameborder="0" 
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                  </div>
+                      <div class="d-flex">
+                       <div class="img">
+                          <img src="https://yt3.ggpht.com/eoX47P13gM1VGZhyqd_nEq2fLuGHof1cMVvKvvathsEN1FsPQNJNafQmiQ3SOvbhEHVjyOkvVw=s48-c-k-c0x00ffffff-no-rj" class="card-img-top 
+                          channel logo mt-1 mx-2" alt="Video Thumbnail">
+                        </div>
+                          <div class="discription">
+                            <h5>Free fire</h5>
+                            <span class="subtext">4.5 *</span>
+                            
+                        </div>
+                        </div>
+                  </div>
+                  <div class="col-lg-4 mt-5">
+                      <div class="embed-responsive embed-responsive-16by9">
+                          <iframe width="350" height="200" src="https://www.youtube.com/embed/WvSGOA0xYQk" title="The Ultimate Clash#top_slg_lordsmobile#" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                      </div>
+                      <div class="d-flex">
+                       <div>
+                          <img src="https://play-lh.googleusercontent.com/oFz-KTIgL6yAuuA5XeHapTQLDcoBVgA9JXCTiID70rPcJBGAT9DdiqNDjNLxcYaG6W3W=s64-rw" class="card-img-top 
+                          channel logo mt-1 mx-2" alt="Video Thumbnail">
+                        </div>
+                          <div class="discription">
+                            <h5>The Ultimate Clash</h5>
+                            <span class="subtext">4.3*</span>
+                            
+                        </div>
+                        </div>
+                  </div>
+                  <div class="col-lg-4 mt-5">
+                      <div class="embed-responsive embed-responsive-16by9 ">
+                          <iframe width="350" height="200" src="https://www.youtube.com/embed/24m67U5KOdg" title="YouTube video player" frameborder="0" 
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                      </div>
+                      <div class="d-flex">
+                       <div>
+                         <img src="https://yt3.ggpht.com/KcYJ_INwSiWRohobGAwO86doc8y5XLb1Psl6C4h07yJoB_eDtvCLGJiVctCTJRYgRac4gCHLKw=s48-c-k-c0x00ffffff-no-rj" class="card-img-top 
+                          channel logo mt-1 mx-2" alt="Video Thumbnail">
+                        </div>
+                          <div class="discription">
+                            <h5>BGMI x Fragon Ball Super</h5>
+                            <span class="subtext">4.5*</span>
+                            <span></span>
+                        </div>
+                      </div>
+                  </div>
+                  </div>
+               </div>
+        </div>
+        <div class="carousel-item active">
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-4 mt-5">
+                      <div class="embed-responsive embed-responsive-16by9">
+                          <iframe width="350" height="200" src="https://www.youtube.com/embed/JzpZ0_WjgwQ" title="YouTube video player" frameborder="0" 
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                      </div>
+                      <div class="d-flex">
+                       <div class="img">
+                          <img src="https://yt3.ggpht.com/ZwLhDRh72Bbqde1-zrKQIY6qOIdYgAAleV27d0sJjsqVzMAstqq7jvz9wahthJaKHiFonvk1Ew=s48-c-k-c0x00ffffff-no-rj" class="card-img-top 
+                          channel logo mt-1 mx-2" alt="Video Thumbnail">
+                        </div>
+                          <div class="discription">
+                            <h5>CarX Highway Racing</h5>
+                            <span class="subtext">4.0*</span>
+                          
+                        </div>
+                        </div>
+                  </div>
+                  <div class="col-lg-4 mt-5">
+                    <div class="embed-responsive embed-responsive-16by9">
+                      <iframe width="350" height="200" src="https://www.youtube.com/embed/JzpZ0_WjgwQ" title="YouTube video player" frameborder="0" 
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                  </div>
+                      <div class="d-flex">
+                       <div>
+                          <img src="https://play-lh.googleusercontent.com/WjXoRzJKWHJ_x52qWYA6ECM70bq3x0vwwYiBhzLXdOIHCo-obdUTztPbskEn0K8_wBs=s64-rw" class="card-img-top 
+                          channel logo mt-1 mx-2" alt="Video Thumbnail">
+                        </div>
+                          <div class="discription">
+                            <h5>Call of Dity</h5>
+                            <span class="subtext">4.2 *  </span>
+                            
+                        </div>
+                        </div>
+                  </div>
+                  <div class="col-lg-4 mt-5">
+                      <div class="embed-responsive embed-responsive-16by9 ">
+                          <iframe width="350" height="200" src="https://www.youtube.com/embed/YtX7PrOtHmI" title="State of Survival V1.12" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                      </div>
+                      <div class="d-flex">
+                       <div>
+                         <img src="https://play-lh.googleusercontent.com/GZjn8tE4QG8vUY40DkowDRv63fHFaSxGCB57bM4drYFA3kgD2Hxq6SJjp3ix7Eur-g=s64-rw" class="card-img-top 
+                          channel logo mt-1 mx-2" alt="Video Thumbnail">
+                        </div>
+                          <div class="discription">
+                            <h5>State of Survival V1.12</h5>
+                            <span class="subtext">3.9</span>
+                          
+                        </div>
+                      </div>
+                  </div>
+               </div>
+        </div>
+        </div>
+        <div class="carousel-item active">
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-4 mt-5">
+                      <div class="embed-responsive embed-responsive-16by9">
+                          <iframe width="350" height="200" src="https://www.youtube.com/embed/wOdyh20-q-0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                      </div>
+                      <div class="d-flex">
+                       <div class="img">
+                          <img src="https://yt3.ggpht.com/JjH5ViyOoi4C67f65POgReqtBa6G4P8SjO6CeA5iS9xeWuDmsRgse3EWxywnin_vA4MxzC30yw=s48-c-k-c0x00ffffff-no-rj" class="card-img-top 
+                          channel logo mt-1 mx-2" alt="Video Thumbnail">
+                        </div>
+                          <div class="discription">
+                            <h5>Spider-Man miles Morales...</h5>
+                            <span class="subtext">4.1*</span>
+                            
+                        </div>
+                        </div>
+                  </div>
+                  <div class="col-lg-4 mt-5">
+                      <div class="embed-responsive embed-responsive-16by9">
+                          <iframe width="350" height="200" src="https://www.youtube.com/embed/GFONMd_M7eg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                      </div>
+                      <div class="d-flex">
+                       <div>
+                          <img src="https://play-lh.googleusercontent.com/lE0NwMZDcEL_o-U7ft6Px_sGWgwBIM8EU1u4H9wbJn0tsUaPgZ_KyU-WnBchtC5Q9Yg=s256-rw" class="card-img-top 
+                          channel logo mt-1 mx-2" alt="Video Thumbnail">
+                        </div>
+                          <div class="discription">
+                            <h5>Evil Lands</h5>
+                            <span class="subtext">4.1*</span>
+            
+                        </div>
+                        </div>
+                  </div>
+                  <div class="col-lg-4 mt-5">
+                      <div class="embed-responsive embed-responsive-16by9 ">
+                          <iframe width="350" height="200" src="https://www.youtube.com/embed/D4iCD0JoJcI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                      </div>
+                      <div class="d-flex">
+                       <div>
+                         <img src="https://yt3.ggpht.com/Famvk8o5sLL5SpYaUxSrg2qsp8xCGdlxakxhUKwmxxYMQwb__60auZCey3Aqlbphfi9Dl4M4=s48-c-k-c0x00ffffff-no-rj" class="card-img-top 
+                          channel logo mt-1 mx-2" alt="Video Thumbnail">
+                        </div>
+                          <div class="discription">
+                            <h5>v1.2|Honkai Star Rail EN</h5>
+                            <span class="subtext">4.0*</span>
+                            
+                        </div>
+                      </div>
+                  </div>
+                  </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade3" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade3" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+      </div>
+      
+ <h3>Multiplayer games</h3>  
+                              <!--card slider section-->
+ 
+<div id="carouselExampleFade" class="carousel slide carousel-fade">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="container text-center">
+        <div class="row row-cols-6">
+          <div class="col">
+            <div class="col-md-2  col-sm-4 mt-3">
+              <div>
+                  <img src="./../img/game-image/header (13).jpg" height="190px" width="170px" class="smallcard">
+                  <div class="details mt-1">
+                      <div class="title ">
+                          <p>ShopTitans 4.3 ★</p>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="col-md-2  col-sm-4 mt-3">
+              <div>
+                  <img src="./../img/game-image/header (11).jpg" height="190px" width="170px" class="smallcard">
+                  <div class="details mt-1">
+                      <div class="title fw-normal ms-2">
+                          <p>NewWorld 4.2★</p>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="col-md-2  col-sm-4 mt-3">
+              <div>
+                  <img src="./../img/game-image/avatar-frontiers.jpeg" height="190px" width="170px" class="smallcard">
+                  <div class="details mt-1">
+                      <div class="title fw-normal ms-2">
+                          <p>Avatar FrontiersPandora 4.7 ★</>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="col-md-2  col-sm-4 mt-3">
+              <div>
+                  <img src="./../img/game-image/header (1).jpg" height="190px" width="170px" class="smallcard">
+                  <div class="details mt-1">
+                      <div class="title fw-normal ms-2">
+                          <p>Forza Morizon5 4.3 ★</p>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="col-md-2  col-sm-4 mt-3">
+              <div>
+                  <img src="./../img/game-image/header (4).jpg" height="190px" width="170px" class="smallcard">
+                  <div class="details mt-1">
+                      <div class="title fw-normal ms-2">
+                          <p>RootedGame 4.3 ★</p>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="col-md-2  col-sm-4 mt-3">
+              <div>
+                  <img src="./../img/game-image/header (3).jpg" height="190px" width="170px" class="smallcard">
+                  <div class="details mt-1">
+                      <div class="title fw-normal ms-2">
+                        <p>PalworldGame 4.3 ★</p>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+    <div class="carousel-item">
+      <div class="container text-center">
+        <div class="row row-cols-6">
+          <div class="col">
+            <div class="col-md-2  col-sm-4 mt-3">
+              <div>
+                  <img src="./../img/game-image/header (2).jpg" height="190px" width="170px" class="smallcard">
+                  <div class="details mt-1">
+                      <div class="title fw-normal ms-2">
+                          <p>MorzaMotersport  4.3 ★</p>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="col-md-2  col-sm-4 mt-3">
+              <div>
+                  <img src="./../img/game-image/header (6).jpg" height="200px" width="170px" class="smallcard">
+                  <div class="details mt-1">
+                      <div class="title fw-normal ms-2">
+                          <p>ProjectZomboid<br>4.4 ★</p>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="col-md-2  col-sm-4 mt-3">
+              <div>
+                  <img src="./../img/game-image/header (7).jpg" height="190px" width="170px" class="smallcard">
+                  <div class="details mt-1">
+                      <div class="title fw-normal ms-2">
+                          <p>AmericanTrack 4.3 ★</p>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="col-md-2  col-sm-4 mt-3">
+              <div>
+                  <img src="./../img/game-image/header (8).jpg" height="190px" width="170px" class="smallcard">
+                  <div class="details mt-1">
+                      <div class="title fw-normal ms-2">
+                          <p>TheAlderScrolls<br>4.0 ★</p>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="col-md-2  col-sm-4 mt-3">
+              <div>
+                  <img src="./../img/game-image/header (9).jpg" height="190px" width="170px" class="smallcard">
+                  <div class="details mt-1">
+                      <div class="title fw-normal ms-2">
+                          <p>EvilWest<br>4.3 ★</p>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="col-md-2  col-sm-4 mt-3">
+              <div>
+                  <img src="./../img/game-image/header (10).jpg" height="190px" width="170px" class="smallcard">
+                  <div class="details mt-1">
+                      <div class="title">
+                          <p>BloonsTD6<br>4.3 ★</p>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="container text-center">
+        <div class="row row-cols-6">
+          <div class="col">
+            <div class="col-md-2  col-sm-4 mt-3">
+              <div>
+                  <img src="./../img/game-image/header (12).jpg" height="190px" width="170px" class="smallcard">
+                  <div class="details mt-1">
+                      <div class="title ">
+                          <p>PlanetZoo<br> 4.3 ★</p>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="col-md-2  col-sm-4 mt-3">
+              <div>
+                  <img src="./../img/game-image/header (14).jpg" height="190px" width="170px" class="smallcard">
+                  <div class="details mt-1">
+                      <div class="title fw-normal ms-2">
+                          <p>GovernorOfPoker<br>4.3 ★</p>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="col-md-2  col-sm-4 mt-3">
+              <div>
+                  <img src="./../img/game-image/photo4k.jpeg" height="190px" width="170px" class="smallcard">
+                  <div class="details mt-1">
+                      <div class="title fw-normal ms-2">
+                          <p>ImortailsOsAvelum<br>4.3 ★</p>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="col-md-2  col-sm-4 mt-3">
+              <div>
+                  <img src="./../img/game-image/rocket-bot-royale-cover.jpeg" height="190px" width="170px" class="smallcard">
+                  <div class="details mt-1">
+                      <div class="title fw-normal ms-2">
+                          <p>RocketBotRoyale<br>4.3 ★</p>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="col-md-2  col-sm-4 mt-3">
+              <div>
+                  <img src="./../img/game-image/zombie-clash-3d---halloween-cover.jpeg" height="190px" width="170px" class="smallcard">
+                  <div class="details mt-1">
+                      <div class="title fw-normal ms-2">
+                          <p>ZombieClash3D<br>4.3 ★</p>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="col-md-2  col-sm-4 mt-3">
+              <div>
+                  <img src="./../img/game-image/9174.jpg" height="190px" width="170px" class="smallcard">
+                  <div class="details mt-1">
+                      <div class="title fw-normal ms-2">
+                          <p>Darktide<br>4.3 ★</p>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          </div>
+          </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<h3>Events happing naw</h3>
+
+<div id="carouselExampleFade1" class="carousel slide carousel-fade1">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="container text-center">
+        <div class="row row-cols-6">
+          <div class="col">
+            <div class="col-md-2  col-sm-4 mt-3">
+              <div>
+                  <img src="./../img/game-image/header (13).jpg" height="180px" width="180px" class="smallcard">
+                  <div class="details mt-1">
+                      <div class="title ">
+                          <p>Top War:Battle Game<br> 4.3 ★</p>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="col-md-2  col-sm-4 mt-3">
+              <div>
+                  <img src="./../img/game-image/header (11).jpg" height="180px" width="180px" class="smallcard">
+                  <div class="details mt-1">
+                      <div class="title fw-normal ms-2">
+                          <p>Game1<br>4.3 ★</p>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="col-md-2  col-sm-4 mt-3">
+              <div>
+                  <img src="./../img/game-image/avatar-frontiers.jpeg" height="180px" width="180px" class="smallcard">
+                  <div class="details mt-1">
+                      <div class="title fw-normal ms-2">
+                          <p>game2<br>4.3 ★</p>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="col-md-2  col-sm-4 mt-3">
+              <div>
+                  <img src="./../img/game-image/header (1).jpg" height="180px" width="180px" class="smallcard">
+                  <div class="details mt-1">
+                      <div class="title fw-normal ms-2">
+                          <p>game3<br>4.3 ★</p>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="col-md-2  col-sm-4 mt-3">
+              <div>
+                  <img src="./../img/game-image/header (4).jpg" height="180px" width="180px" class="smallcard">
+                  <div class="details mt-1">
+                      <div class="title fw-normal ms-2">
+                          <p>game4<br>4.3 ★</p>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="col-md-2  col-sm-4 mt-3">
+              <div>
+                  <img src="./../img/game-image/header (3).jpg" height="180px" width="180px" class="smallcard">
+                  <div class="details mt-1">
+                      <div class="title fw-normal ms-2">
+                          <p>game5<br>4.3 ★</p>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+    <div class="carousel-item">
+      <div class="container text-center">
+        <div class="row row-cols-6">
+          <div class="col">
+            <div class="col-md-2  col-sm-4 mt-3">
+              <div>
+                  <img src="./../img/game-image/header (2).jpg" height="180px" width="180px" class="smallcard">
+                  <div class="details mt-1">
+                      <div class="title fw-normal ms-2">
+                          <p>game6<br>4.3 ★</p>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="col-md-2  col-sm-4 mt-3">
+              <div>
+                  <img src="./../img/game-image/header (6).jpg" height="180px" width="180px" class="smallcard">
+                  <div class="details mt-1">
+                      <div class="title fw-normal ms-2">
+                          <p>game7<br>4.3 ★</p>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="col-md-2  col-sm-4 mt-3">
+              <div>
+                  <img src="./../img/game-image/header (7).jpg" height="180px" width="180px" class="smallcard">
+                  <div class="details mt-1">
+                      <div class="title fw-normal ms-2">
+                          <p>game8<br>4.3 ★</p>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="col-md-2  col-sm-4 mt-3">
+              <div>
+                  <img src="./../img/game-image/header (8).jpg" height="180px" width="180px" class="smallcard">
+                  <div class="details mt-1">
+                      <div class="title fw-normal ms-2">
+                          <p>game9<br>4.3 ★</p>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="col-md-2  col-sm-4 mt-3">
+              <div>
+                  <img src="./../img/game-image/header (9).jpg" height="180px" width="180px" class="smallcard">
+                  <div class="details mt-1">
+                      <div class="title fw-normal ms-2">
+                          <p>game10<br>4.3 ★</p>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="col-md-2  col-sm-4 mt-3">
+              <div>
+                  <img src="./../img/game-image/header (10).jpg" height="180px" width="180px" class="smallcard">
+                  <div class="details mt-1">
+                      <div class="title">
+                          <p>game11<br>4.3 ★</p>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="container text-center">
+        <div class="row row-cols-6">
+          <div class="col">
+            <div class="col-md-2  col-sm-4 mt-3">
+              <div>
+                  <img src="./../img/game-image/header (13).jpg" height="180px" width="180px" class="smallcard">
+                  <div class="details mt-1">
+                      <div class="title ">
+                          <p>Game12<br> 4.3 ★</p>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="col-md-2  col-sm-4 mt-3">
+              <div>
+                  <img src="./../img/game-image/header (11).jpg" height="180px" width="180px" class="smallcard">
+                  <div class="details mt-1">
+                      <div class="title fw-normal ms-2">
+                          <p>game13<br>4.3 ★</p>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="col-md-2  col-sm-4 mt-3">
+              <div>
+                  <img src="./../img/game-image/avatar-frontiers.jpeg" height="180px" width="180px" class="smallcard">
+                  <div class="details mt-1">
+                      <div class="title fw-normal ms-2">
+                          <p>game14<br>4.3 ★</p>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="col-md-2  col-sm-4 mt-3">
+              <div>
+                  <img src="./../img/game-image/header (1).jpg" height="180px" width="180px" class="smallcard">
+                  <div class="details mt-1">
+                      <div class="title fw-normal ms-2">
+                          <p>game15<br>4.3 ★</p>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="col-md-2  col-sm-4 mt-3">
+              <div>
+                  <img src="./../img/game-image/header (4).jpg" height="180px" width="180px" class="smallcard">
+                  <div class="details mt-1">
+                      <div class="title fw-normal ms-2">
+                          <p>game16<br>4.3 ★</p>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="col-md-2  col-sm-4 mt-3">
+              <div>
+                  <img src="./../img/game-image/header (3).jpg" height="180px" width="180px" class="smallcard">
+                  <div class="details mt-1">
+                      <div class="title fw-normal ms-2">
+                          <p>game17<br>4.3 ★</p>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          </div>
+          </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev " type="button" data-bs-target="#carouselExampleFade1" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon " aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade1" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+ integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
 </html>
