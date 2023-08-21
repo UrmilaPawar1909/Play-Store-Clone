@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Google Play Store Sign In</title>
-<!-- Include Bootstrap CSS -->
 <style>
-    .logo{
-        height: auto;
-        width: 100px;
-    }
+.logo{
+    height: auto;
+    width: 100px;
+}
 </style>
+<!-- Include Bootstrap CSS -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
@@ -20,19 +20,30 @@
         <div class="card">
         <div class="card-header text-center">
             <img src="./../img/Apps-Images/google-play.png" alt="" class="logo">
+
             <h4>Sign in to Google Play Store</h4>
         </div>
         <div class="card-body">
-            <form>
+            <form id="signinForm">
             <div class="form-group">
                 <label for="email">Email address</label>
                 <input type="email" class="form-control" id="email" placeholder="Enter email">
+                <small class="text-danger" id="emailError"></small>
             </div>
             <div class="form-group">
                 <label for="password">Password</label>
                 <input type="password" class="form-control" id="password" placeholder="Password">
+                <small class="text-danger" id="passwordError"></small>
             </div>
-            <button type="submit" class="btn btn-primary btn-block" id="signinBtn"><a href="./../index.html" class="text-light">Sign In</a></button>
+            <div class="form-group">
+                <p class="text-center mt-2"><a href="./signup.html/">Forgot Password ?</a></p>
+            
+            </div>
+            <button type="submit" class="btn btn-primary btn-block" id="signinBtn">Sign In</button>
+            <div class="form-group">
+                <p class="text-center mt-2">Don't have an account? <a href="./signup.html/">sign up</a></p>
+            
+            </div>
             </form>
         </div>
         </div>
@@ -40,17 +51,56 @@
     </div>
 </div>
 
-<!-- Include Bootstrap JS -->
+<!-- Include Bootstrap JS and jQuery -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-<script>
 
-    document.getElementById('signinBtn').addEventListener('click', function(event) {
+<script>
+    var signinForm = document.getElementById('signinForm');
+    var emailField = document.getElementById('email');
+    var passwordField = document.getElementById('password');
+    var emailError = document.getElementById('emailError');
+    var passwordError = document.getElementById('passwordError');
+
+    signinForm.addEventListener('submit', function(event) {
     event.preventDefault();
-    var email = document.getElementById('email').value;
-    var password = document.getElementById('password').value;
     
+      // Reset error messages
+    emailError.textContent = '';
+    passwordError.textContent = '';
+    
+    var email = emailField.value;
+    var password = passwordField.value;
+
+      // Regular expression for email validation
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    
+    if (!email) {
+        emailError.textContent = 'Email is required.';
+    } else if (!emailRegex.test(email)) {
+        emailError.textContent = 'Invalid email address.';
+    }
+
+    if (!password) {
+        passwordError.textContent = 'Password is required.';
+    }
+
+      // for preventing submission of sign in
+    if (emailError.textContent || passwordError.textContent) {
+        return;
+    }
+
+      // authentication logic
+    var Signin = true;
+
+    if (Signin) {
+        alert('Sign in successful! Welcome to the Google Play Store.');
+    }else {
+        alert('Sign in failed. Please check your email and password.');
+    }
     console.log('Email:', email);
     console.log('Password:', password);
+
+    window.location.href = './../index.html';
     });
 </script>
 </body>
