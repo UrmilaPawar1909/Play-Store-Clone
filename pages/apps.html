@@ -6,6 +6,12 @@
     <link rel="stylesheet" href="./../css/apps.css" />
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
 </head>
 
 <body>
@@ -56,12 +62,11 @@
     <!-- First Row Cards-->
     <h3 class="mt-2 ms-5 heading-video fs-4 fw-medium">Government apps & citizen services</h3>
     <div class="container-fluid">
-        <div class="row mx-5 ">
-            <!-- 1st row 1st video-->
-            <div class="col-md-2  col-sm-4 mt-3">
+        <div class="row mx-5 slider">
+            <!-- 1st row 1st video -->
+            <div class="col-md-2 col-sm-4 mt-3">
                 <div>
                     <img src="./../img/Apps-Images/Image-1.1.png" height="180px" width="180px" class="border rounded-5 border-text-body-tertiary">
-                    <!-- Details of cards-->
                     <div class="details mt-1">
                         <div class="title fw-normal ms-2">
                             <p>Aarogya Setu<br>4.0 ★</p>
@@ -131,7 +136,7 @@
     <!-- Second Row Cards-->
     <h3 class="mt-2 ms-5 heading-video fs-4 fw-medium">Popular apps</h3>
     <div class="container-fluid">
-        <div class="row mx-5 ">
+        <div class="row mx-5  slider">
             <!-- 2nd row 1st video-->
             <div class="col-md-2  col-sm-4 mt-3">
                 <div>
@@ -206,7 +211,7 @@
     <!-- Third Row Cards-->
     <h3 class="mt-2 ms-5 heading-video fs-4 fw-medium">Restaurants & delivery</h3>
     <div class="container-fluid">
-        <div class="row mx-5 ">
+        <div class="row mx-5  slider">
             <!-- 3rd row 1st video-->
             <div class="col-md-2  col-sm-4 mt-3">
                 <div>
@@ -280,7 +285,7 @@
     <!-- Fourth Row Cards-->
     <h3 class="mt-2 ms-5 heading-video fs-4 fw-medium">Go Shopping</h3>
     <div class="container-fluid">
-        <div class="row mx-5 ">
+        <div class="row mx-5  slider">
             <!-- 4th row 1st video-->
             <div class="col-md-2  col-sm-4 mt-3">
                 <div>
@@ -354,7 +359,7 @@
     <!-- Fifth Row Cards-->
     <h3 class="mt-2 ms-5 heading-video fs-4 fw-medium">Get a ride</h3>
     <div class="container-fluid">
-        <div class="row mx-5 ">
+        <div class="row mx-5  slider">
             <!-- 5th row 1st video-->
             <div class="col-md-2  col-sm-4 mt-3">
                 <div>
@@ -426,7 +431,45 @@
         </div>
     </div>
 
-
+    <!-- Image slider-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+    <script type="text/javascript">
+        $('.slider').slick({
+            dots: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 6,
+            slidesToScroll: 1,
+            responsive: [{
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        arrows: true,
+                        infinite: true,
+                        dots: true
+                    }
+                }, {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                }, {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+            ]
+        });
+    </script>
 
 
 </body>
