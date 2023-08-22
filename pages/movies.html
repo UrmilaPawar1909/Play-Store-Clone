@@ -8,13 +8,20 @@
     <link href="../css/movies.css" rel="stylesheet" />
 </head>
 
+<script>
+    movie()
+    {
+       "https://play.google.com/store/movies/details/Elemental?id=dT6MlLDIUC0.P"
+    }
+</script>
+
 <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
         </script>
 
     <!-- Navbar -->
-    
+
     <nav class="navbar navbar-expand-lg sticky-top bg-body-tertiary position-steeky" data-bs-theme="dark">
         <div class="container-fluid">
             <img src="/img/google_playstore_logo-removebg-preview.png" class="logo" height="50" width="200">
@@ -123,10 +130,10 @@
                     <div class="carousel-item active ">
 
                         <div class="row">
-                            <div class="col-lg-2 col-md-4 col-sm-6 mt-3 ">
+                            <div class="col-lg-2 col-md-4 col-sm-6 mt-3 img-hover  ">
 
-                                <img src="../img/movies/movie1.webp" width="200px" class="m-2 img-fluid card" />
-                                <div class="ms-2 mt-3">Spider-Man: Across The Spider-Verse</div>
+                                <a href="https://play.google.com/store/movies/details/Elemental?id=dT6MlLDIUC0.P"><img src="../img/movies/movie1.webp" onclick="movie()" width="200px" class="m-2 img-fluid card" /></a>
+                                <div class="ms-3 mt-3 ">Spider-Man: Across The Spider-Verse</div>
                                 <div clas="d-flex">
                                     <span class="mx-2 text-body-secondary"> 4.2★</span>
                                     <span class="text-secondary"><del>₹350.00</del></span>
@@ -134,47 +141,55 @@
                                 </div>
 
                             </div>
-                            <div class="col-lg-2 col-md-4 col-sm-6 mt-3 ">
+                            <div class="col-lg-2 col-md-4 col-sm-6 mt-3 img-hover  img-hover">
 
                                 <img src="../img/movies/movie2.webp" width="200px" class="m-2 img-fluid card" />
-                                <div class="ms-2">Insidious: The Red Door</div>
+                                <div class="ms-3 mt-3 ">Insidious: The Red Door</div>
                                 <div clas="d-flex">
-                                    <span class="mx-2 text-secondary">1.0★</span>
+                                    <span class="mx-2 text-secondary ms-3">1.0★</span>
                                     <span class="text-secondary">₹250.00</span>
                                 </div>
-                               
+
 
                             </div>
-                            <div class="col-lg-2 col-md-4 col-sm-6 mt-3 ">
+                            <div class="col-lg-2 col-md-4 col-sm-6 mt-3 img-hover  ">
 
                                 <img src="../img/movies/movie3.webp" width="200px" class="m-2 img-fluid card" />
-                                <p class="mx-2 mt-3">LElemental</p>
-                                <span class="mx-2">3.0★</span>
-                                <span>₹690.00</span>
+                                <div class="ms-3 mt-3 ">LElemental</div>
+                                <div clas="d-flex">
+                                    <span class="mx-2 text-secondary ms-3">3.0★</span>
+                                    <span class="text-secondary">₹690.00</span>
+                                </div>
 
                             </div>
-                            <div class="col-lg-2 col-md-4 col-sm-6 mt-3 ">
+                            <div class="col-lg-2 col-md-4 col-sm-6 mt-3 img-hover  ">
 
                                 <img src="../img/movies/movie4.webp" width="200px" class="m-2 img-fluid card" />
-                                <p class="mx-2 mt-3">Tera Lakshya : Cobweb</p>
-                                <span class="mx-2">4.0★</span>
-                                <span>₹150.00</span>
+                                <div class="ms-3 mt-3 ">Tera Lakshya : Cobweb</div>
+                                <div clas="d-flex">
+                                    <span class="mx-2 text-secondary ms-3">4.0★</span>
+                                    <span class="text-secondary">₹150.00</span>
+                                </div>
+
                             </div>
 
-                            <div class="col-lg-2 col-md-4 col-sm-6 mt-3 ">
+                            <div class="col-lg-2 col-md-4 col-sm-6 mt-3 img-hover  ">
 
                                 <img src="../img/movies/movie5.webp" width="200px" class="m-2 img-fluid card" />
-                                <p class="mx-2 mt-3">Single Shankarum Smartphone Simranum</p>
-                                <span>₹25.00</span>
-
+                                <div class="ms-3 mt-3">Single Shankarum Smartphone Simranum</div>
+                                <div clas="d-flex">
+                                    <span class="mx-2 text-secondary ms-3 ms-3">₹25.00</span>
+                                </div>
 
                             </div>
-                            <div class="col-lg-2 col-md-4 col-sm-6 mt-3 ">
+                            <div class="col-lg-2 col-md-4 col-sm-6 mt-3 img-hover  ">
 
                                 <img src="../img/movies/movie6.webp" width="200px" class="m-2  img-fluid card" />
-                                <p class="mx-2 mt-3">Fast X</p>
-                                <span class="mx-2">4.2★</span>
-                                <span>₹180.00</span>
+                                <div class="ms-3 mt-3 ">Fast X</div>
+                                <div clas="d-flex">
+                                    <span class="mx-2 text-secondary ms-3">4.2★</span>
+                                    <span class="text-secondary">₹180.00</span>
+                                </div>
 
                             </div>
 
@@ -189,53 +204,59 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="row">
-                            <div class="col-lg-2 col-md-4 col-sm-6 mt-3">
+                            <div class="col-lg-2 col-md-4 col-sm-6 mt-3 img-hover ">
                                 <img src="../img/movies/t1.webp" width="200px" class="m-2 img-fluid card" />
-                                <p class="ms-2 mt-3">Transformers: Rise of the Beasts</p>
-
-                                <span class="mx-2"> 2.7★</span>
-                                <span>₹390.00</span>
+                                <div class="ms-3 mt-3 ">Transformers: Rise of the Beasts</div>
+                                <div clas="d-flex">
+                                    <span class="mx-2 text-secondary ms-3">2.7★</span>
+                                    <span class="text-secondary">₹390.00</span>
+                                </div>
 
                             </div>
-                            <div class="col-lg-2 col-md-4 col-sm-6 mt-3">
+                            <div class="col-lg-2 col-md-4 col-sm-6 mt-3 img-hover ">
                                 <img src="../img/movies/t2.webp" width="200px" class="m-2 img-fluid card" />
-                                <p class="mx-2 mt-3">John Wick: Chapter 4</p>
-
-                                <span class="mx-2"> 3.6★</span>
-                                <span>₹150.00</span>
+                                <div class="ms-3 mt-3 ">John Wick: Chapter 4</div>
+                                <div clas="d-flex">
+                                    <span class="mx-2 text-secondary ms-3">3.6★</span>
+                                    <span class="text-secondary">₹150.00</span>
+                                </div>
 
                             </div>
-                            <div class="col-lg-2 col-md-4 col-sm-6 mt-3">
+                            <div class="col-lg-2 col-md-4 col-sm-6 mt-3 img-hover ">
                                 <img src="../img/movies/t3.webp" width="200px" class="m-2 img-fluid card" />
-                                <p class="mx-2 mt-3">The3.Flash </p>
-
-                                <span class="mx-2"> 3.3★</span>
-                                <span>₹150.00</span>
+                                <div class="ms-3 mt-3 ">The3.Flash</div>
+                                <div clas="d-flex">
+                                    <span class="mx-2 text-secondary ms-3">3.3★</span>
+                                    <span class="text-secondary">₹150.00</span>
+                                </div>
 
                             </div>
-                            <div class="col-lg-2 col-md-4 col-sm-6 mt-3">
+                            <div class="col-lg-2 col-md-4 col-sm-6 mt-3 img-hover ">
                                 <img src="../img/movies/t4.webp" width="200px" class="m-2 img-fluid card" />
-                                <p class="mx-2 mt-3">The Super Mario Bros. Movie </p>
-
-                                <span class="mx-2"> 3.3★</span>
-                                <span>₹180.00</span>
-
+                                <div class="ms-3 mt-3 ">The Super Mario Bros. Movie</div>
+                                <div clas="d-flex">
+                                    <span class="mx-2 text-secondary ms-3">3.3★</span>
+                                    <span class="text-secondary">₹180.00</span>
+                                </div>
+                                
                             </div>
-                            <div class="col-lg-2 col-md-4 col-sm-6 mt-3">
+                            <div class="col-lg-2 col-md-4 col-sm-6 mt-3 img-hover ">
                                 <img src="../img/movies/t5.webp" width="200px" class="m-2 img-fluid card" />
-                                <p class="mx-2 mt-3">Evil Dead Rise </p>
-
-                                <span class="mx-2"> 3.6★</span>
-                                <span>₹150.00</span>
-
+                                <div class="ms-3 mt-3 ">Evil Dead Rise</div>
+                                <div clas="d-flex">
+                                    <span class="mx-2 text-secondary ms-3">3.6★</span>
+                                    <span class="text-secondary">₹150.00</span>
+                                </div>
+                            
                             </div>
-                            <div class="col-lg-2 col-md-4 col-sm-6 mt-3">
+                            <div class="col-lg-2 col-md-4 col-sm-6 mt-3 img-hover ">
                                 <img src="../img/movies/t6.webp" width="200px" class="m-2 img-fluid card" />
-                                <p class="mx-2 mt-3">The Meg</p>
-
-                                <span class="mx-2"> 4.4★</span>
-                                <span>₹120.00</span>
-
+                                <div class="ms-3 mt-3 ">The Meg</div>
+                                <div clas="d-flex">
+                                    <span class="mx-2 text-secondary ms-3">4.4★</span>
+                                    <span class="text-secondary">₹120.00</span>
+                                </div>
+                               
                             </div>
 
                         </div>
@@ -247,56 +268,62 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="row">
-                            <div class="col-lg-2 col-md-4 col-sm-6 mt-3">
+                            <div class="col-lg-2 col-md-4 col-sm-6 mt-3 img-hover ">
                                 <img src="../img/movies/n1.webp" width="200px" class="m-2 img-fluid card" />
-                                <p class="ms-2 mt-3">Justice League: Warworld</p>
-
-                                <!-- <span class="mx-2 mt-5"> 3.2★</span> -->
-                                <span>₹150.00</span>
-
+                                <div class="ms-3 mt-3 ">Justice League: Warworld</div>
+                                <div clas="d-flex">
+                                    <span class="mx-2 text-secondary ms-3">2.2★</span>
+                                    <span class="text-secondary">₹150.00</span>
+                                </div>
+                              
                             </div>
 
-                            <div class="col-lg-2 col-md-4 col-sm-6 mt-3">
+                            <div class="col-lg-2 col-md-4 col-sm-6 mt-3 img-hover ">
 
                                 <img src="../img/movies/n2.webp" width="200px" class="m-2 img-fluid card" />
-                                <p class="mx-2 mt-3">SOMEWHERE IN QUEENS</p>
-                                <!-- <span class="mx-2"> 4.4★</span> -->
-                                <span>₹120.00</span>
-
-
+                                <div class="ms-3 mt-3 ">SOMEWHERE IN QUEENS</div>
+                                <div clas="d-flex">
+                                    <span class="mx-2 text-secondary ms-3">3.0★</span>
+                                    <span class="text-secondary">₹120.00</span>
+                                </div>
+                               
                             </div>
 
-                            <div class="col-lg-2 col-md-4 col-sm-6 mt-3">
+                            <div class="col-lg-2 col-md-4 col-sm-6 mt-3 img-hover ">
                                 <img src="../img/movies/n3.webp" width="200px" class="m-2 img-fluid card" />
-                                <p class="mx-2 mt-3">Dampyr</p>
-
-                                <span class="mx-2"> 2.5★</span>
-                                <span>₹120.00</span>
-
+                                <div class="ms-3 mt-3 ">Dampyr</div>
+                                <div clas="d-flex">
+                                    <span class="mx-2 text-secondary ms-3">2.5★</span>
+                                    <span class="text-secondary">₹120.00</span>
+                                </div>
+                               
                             </div>
-                            <div class="col-lg-2 col-md-4 col-sm-6 mt-3">
+                            <div class="col-lg-2 col-md-4 col-sm-6 mt-3 img-hover ">
                                 <img src="../img/movies/n4.webp" width="200px" class="m-2 img-fluid card" />
-                                <p class="mx-2 mt-3">Phone Bhoot</p>
-
-                                <!-- <span class="mx-2"> 4.2★</span> -->
-                                <span>₹50.00</span>
-
+                                <div class="ms-3 mt-3 ">Phone Bhoot</div>
+                                <div clas="d-flex">
+                                    <span class="mx-2 text-secondary ms-3">3.0★</span>
+                                    <span class="text-secondary">₹50.00</span>
+                                </div>
+                            
                             </div>
-                            <div class="col-lg-2 col-md-4 col-sm-6 mt-3">
+                            <div class="col-lg-2 col-md-4 col-sm-6 mt-3 img-hover ">
                                 <img src="../img/movies/n5.webp" width="200px" class="m-2 img-fluid card" />
-                                <p class="mx-2 mt-3">It Ain't Over</p>
-
-                                <span class="mx-2"> 3.0★</span>
-                                <span>₹120.00</span>
-
+                                <div class="ms-3 mt-3 ">It Ain't Over</div>
+                                <div clas="d-flex">
+                                    <span class="mx-2 text-secondary ms-3">3.0★</span>
+                                    <span class="text-secondary">₹120.00</span>
+                                </div>
+                                
                             </div>
-                            <div class="col-lg-2 col-md-4 col-sm-6 mt-3">
+                            <div class="col-lg-2 col-md-4 col-sm-6 mt-3 img-hover ">
                                 <img src="../img/movies/n6.webp" width="200px" class="m-2 img-fluid card" />
-                                <p class="mx-2 mt-3">Resident Evil: Death Island</p>
-
-                                <span class="mx-2"> 3.6★</span>
-                                <span>₹250.00</span>
-
+                                <div class="ms-3 mt-3 ">Resident Evil: Death Island</div>
+                                <div clas="d-flex">
+                                    <span class="mx-2 text-secondary ms-3">3.6★</span>
+                                    <span class="text-secondary">₹250.00</span>
+                                </div>
+                                
                             </div>
 
                         </div>
