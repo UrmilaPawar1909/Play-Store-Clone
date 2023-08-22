@@ -57,14 +57,36 @@
             </div>
         </div>
     </nav>
+    <!-- Small Card Slider -->
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./../img/Apps-Images/Poster-2.png" class="d-block w-100" alt="..." height="400px" width="Auto">
+            </div>
+            <div class="carousel-item">
+                <img src="./../img/Apps-Images/Poster-1.webp" class="d-block w-100" alt="..." height="400px" width="Auto">
+            </div>
+            <div class="carousel-item">
+                <img src="./../img/Apps-Images/Poster-2.png" class="d-block w-100" alt="..." height="400px" width="Auto">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+    </div>
     <!-- first Row Cards-->
     <h3 class="mt-2 ms-5 heading-video fs-4 fw-medium">Popular apps</h3>
-    <div class="container-fluid">
-        <div class="row mx-5  slider">
+    <div class="container-fluid ">
+        <div class="row mx-5  slider ">
             <!--1st row 1st card-->
-            <div class="col-md-2  col-sm-4 mt-3 ">
+            <div class="col-md-2  col-sm-4 mt-3 cards">
                 <div>
-                    <img src="./../img/Apps-Images/Image-2.1.jpg" height="180px" width="180px" class="border rounded-5 border-text-body-tertiary"> Details of cards
+                    <img src="./../img/Apps-Images/Image-2.1.jpg" height="180px" width="180px" class="border rounded-5 border-text-body-tertiary">
                     <!-- Details of cards-->
                     <div class="details mt-1">
                         <div class="title fw-normal ms-2">
@@ -459,7 +481,8 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> <br><br><br>
+
     <!-- Image slider-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer">
@@ -502,6 +525,61 @@
         });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <hr class="mx-5" />
+
+    <footer>
+        <h3 class="mt-2  heading-video fs-1 fw-medium" style="text-align: center;">Our Team</h3>
+        <div class="container-fluid" style="margin-left: 200px;">
+            <div class="row mx-5  slider ">
+                <!--1st row 1st card-->
+                <div class="col-md-2  col-sm-4 mt-3 cards ">
+                    <div>
+                        <img src="./../img/Apps-Images/Kaveri.jpg" height="160px" width="160px" class="border rounded-5 border-text-body-tertiary rounded-circle">
+                        <!-- Details of cards-->
+                        <div class="details mt-1">
+                            <div class="title fw-normal ms-2">
+                                <p class="ms-4">Kaveri Tupe</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 1st Row 2nd card-->
+                <div class="col-md-2 col-sm-4 mt-3">
+                    <div>
+                        <img src="" height="160px" width="160px" class="border rounded-5 border-text-body-tertiary rounded-circle">
+                        <!-- Details of cards-->
+                        <div class="details mt-1">
+                            <div class="title fw-normal ms-2">
+                                <p class="ms-4">Urmila Pawar</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 1st Row 3rd card-->
+                <div class="col-md-2 col-sm-4 mt-3">
+                    <div>
+                        <img src=" " height="160px" width="160px" class="border rounded-5 border-text-body-tertiary rounded-circle">
+                        <div class="details mt-1">
+                            <div class="title fw-normal ms-2">
+                                <p class="ms-2">Yash Chaudhari</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 1st row 4th card-->
+                <div class="col-md-2 col-sm-4 mt-3">
+                    <div>
+                        <img src="" height="160px" width="160px" class="border rounded-5 border-text-body-tertiary rounded-circle">
+                        <div class="details mt-1">
+                            <div class="title fw-normal ms-2">
+                                <p class="ms-2">Hemant Gaikawad</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 </body>
 
