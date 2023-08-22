@@ -18,3 +18,8 @@
    margin-inline-start: 60px;
    margin-bottom: 8px;
 }
+
+.img-hover:hover{
+   background-color: rgb(224, 224, 224);
+   border-radius: 5px;
+}
