@@ -3,31 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google Play Store Sign UP</title>
+    <title>Google Play Store Sign Up</title>
     
     <style>
-        .logo{
+        .logo {
             width: auto;
             height: 150px;
         }
     </style>
     <!-- Include Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
 </head>
 <body>
-
     <div class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-header text-center">
                         <img src="./../img/Apps-Images/google-play.png" alt="" class="logo">
-                        <h4>Create Google playstore Account</h4>
+                        <h4>Create a Google Play Store Account</h4>
                     </div>
-
                     <div class="card-body">
-                        <form>
+                        <form id="signupForm">
                             <div class="form-group">
                                 <label for="Name">Name</label>
                                 <input type="text" class="form-control" id="Name" placeholder="Enter Your Name">
@@ -35,17 +32,19 @@
                             <div class="form-group">
                                 <label for="email">Email address</label>
                                 <input type="email" class="form-control" id="email" placeholder="Enter email">
+                                <small class="text-danger" id="emailError"></small>
                             </div>
                             <div class="form-group">
                                 <label for="password">Password</label>
                                 <input type="password" class="form-control" id="password" placeholder="Password">
+                                <small class="text-danger" id="passwordError"></small>
                             </div>
                             <div class="form-group">
                                 <label for="confirmPassword">Confirm Password</label>
                                 <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password">
+                                <small class="text-danger" id="cpasswordError"></small>
                             </div>
-                            <button type="submit" class="btn btn-primary btn-block" id="signupBtn"></a>Sign Up</button>
-
+                            <button type="submit" class="btn btn-primary btn-block" id="signupBtn">Sign Up</button>
                         </form>
                     </div>
                 </div>
@@ -53,9 +52,70 @@
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-
     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var signupForm = document.getElementById('signupForm');
+            var nameField = document.getElementById('Name');
+            var emailField = document.getElementById('email');
+            var passwordField = document.getElementById('password');
+            var cpasswordField = document.getElementById('confirmPassword');
+            var emailError = document.getElementById('emailError');
+            var passwordError = document.getElementById('passwordError');
+            var cpasswordError = document.getElementById('cpasswordError');
 
+            signupForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                // Reset error messages
+                emailError.textContent = '';
+                passwordError.textContent = '';
+                cpasswordError.textContent = '';
+
+                var name = nameField.value;
+                var email = emailField.value;
+                var password = passwordField.value;
+                var cpassword = cpasswordField.value;
+
+                // Regular expression for email validation
+                var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                if (!email) {
+                    emailError.textContent = 'Email is required.';
+                } else if (!emailRegex.test(email)) {
+                    emailError.textContent = 'Invalid email address.';
+                }
+
+                if (!password) {
+                    passwordError.textContent = 'Password is required.';
+                }
+
+                if (password !== cpassword) {
+                    cpasswordError.textContent = 'Passwords do not match.';
+                }
+
+                
+                if (emailError.textContent || passwordError.textContent || cpasswordError.textContent) {
+                    return;
+                }
+
+        
+                var Signup = true;
+
+                if (Signup) {
+                    alert('Account creation successful! Welcome to the Google Play Store.');
+                } else {
+                    alert('Account creation failed. Please try again.');
+                }
+
+            console.log('Name:',name);
+            console.log('Email:',email);
+            console.log('Password:',password);
+            console.log('confirmed password:',cpassword);
+
+            
+                window.location.href = 'signin.html';
+            });
+        });
     </script>
 </body>
 </html>
