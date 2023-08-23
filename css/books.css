@@ -1,5 +1,76 @@
 .colume_card:hover{
     background-color: rgb(224, 224, 224);
     border-radius: 5px;
+   
+}
+
+
+  
+  footer a {
+    color: black;
+    font-size: 14px;
+    transition-duration: 0.2s;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    color: #FA944B;
+    text-decoration: none;
+  }
+  
+  .copy {
+    font-size: 12px;
+    padding: 10px;
+    border-top: 1px solid #FFFFFF;
+  }
+  
+  .footer-middle {
+    padding-top: 2em;
+    color: white;
+  }
+  .blackplay{
+      margin-top: 90px;
+      margin-left: 100px;
+  }
+  body {
+    padding-top: 2rem;
+}
+h4{
+    color: black;
+}
+/**
+:root{
+    --primary-color:#edf2fc;
+    --secondary-color:#212121;
 
 }
+.dark-theme{
+    --primary-color: #1d1e1e;
+    --secondary-color: #fff;
+
+}
+#icon{
+    width: 30px;
+    cursor: pointer;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    background-color: var(--secondary-color);
+    
+}
+nav{
+    background-color: var(--secondary-color);
+}
+.nav-link {
+    color:var(--primary-color);
+}
+h3{
+    color:var(--primary-color);
+}
+.navbar-brand {
+    color:var(--primary-color);
+}
+form{
+    color:var(--primary-color);
+}*/
