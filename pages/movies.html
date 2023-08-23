@@ -7,7 +7,119 @@
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
     <link href="../css/movies.css" rel="stylesheet" />
 </head>
-
+<script>
+    var icon = document.getElementById("icon");
+  icon.onclick = function(){
+      document.body.classList.toggle("dark-theme");
+  
+      if(document.body.classList.contains("dark-theme")){
+          icon.src ="/img/Games-Images/moon.png";
+      }
+      else{
+          icon.src="/img/Games-Images/sun.png";
+      }
+  }
+  
+  var slides = document.querySelectorAll('.slide');
+  var rbtn = document.querySelectorAll('.rad-btn');
+  var leftArrow = document.querySelector('.left');
+  var rightArrow = document.querySelector('.right');
+  
+  var slideInt; //to set ongoing time of slides
+  var intTime = 5000; // interval time 5000ms
+  
+  //---Iterate all radio navigation button----
+  rbtn.forEach(function(item, index){
+      //click event for buttons
+      item.addEventListener('click',function(){
+          manButtonNav(index);
+      });
+  });
+  
+  console.log(slides[slides.length - 1]);
+  
+  //-----Click Events for Arrows----
+  // Right Arrow 
+  rightArrow.addEventListener('click',function(e){
+      e.preventDefault();
+      nextSlide();
+      clrInterval();
+  });
+  
+  //Left Arrow
+  leftArrow.addEventListener('click',function(e) {
+      e.preventDefault();
+      prevSlide();
+      clrInterval();
+  });
+  
+  //-----Function for radio navigation-----
+  function manButtonNav(index) {
+      for(var i = 0; i < slides.length; i++){
+          //set slide and radio navigation button
+          if(i !== index){
+              slides[i].classList.remove('curr');
+              rbtn[i].classList.remove('active');
+          }
+          else{
+              slides[index].classList.add('curr');
+              rbtn[index].classList.add('active');
+          }
+      }
+      clrInterval();
+  }
+  
+  //-----Function for the next slide-----
+  function nextSlide(){
+      var curr = document.querySelector('.curr');
+      var active = document.querySelector('.active');
+  
+      // Unset Current Slide and Radio Button
+      curr.classList.remove('curr');
+      active.classList.remove('active');
+  
+      // Set Next Slide and Radio Button
+      if(curr.nextElementSibling){
+          curr.nextElementSibling.classList.add('curr');
+          active.nextElementSibling.classList.add('active');
+      }
+      else{
+          slides[0].classList.add('curr');
+          rbtn[0].classList.add('active');
+      }
+  }
+  
+  //-----Function for the previous slide-----
+  function prevSlide(){
+      var curr = document.querySelector('.curr');
+      var active = document.querySelector('.active');
+  
+      // Unset Current Slide and Radio Button
+      curr.classList.remove('curr');
+      active.classList.remove('active');
+  
+      // Set Previous Slide and Radio Button
+      if(curr.previousSibling){
+          curr.previousElementSibling.classList.add('curr');
+          active.previousElementSibling.classList.add('active');
+      }
+      else{
+          
+          slides[0].classList.add('curr');
+          rbtn[0].classList.add('active');
+      }
+          
+  }
+  //----Function for cler Interval-----
+  function clrInterval() {
+      clearInterval(slideInt);
+      slideInt = setInterval(nextSlide, intTime);
+  }
+  
+  //----Automatic Slide Navigation----
+  slideInt = setInterval(nextSlide, intTime);
+  
+  </script>
 <script>
     movie()
     {
@@ -22,7 +134,7 @@
 
     <!-- Navbar -->
 
-    <nav class="navbar navbar-expand-lg sticky-top bg-body-tertiary position-steeky" data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg sticky-top position-steeky">
         <div class="container-fluid">
             <img src="/img/google_playstore_logo-removebg-preview.png" class="logo" height="50" width="200">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -38,7 +150,7 @@
                         <a class="nav-link " href="/pages/apps.html">Apps</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active">Movies</a>
+                        <a class="nav-link" href="/pages/movies.html">Movies</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link " href="/pages/books.html">Books</a>
@@ -47,17 +159,17 @@
                         <a class="nav-link " href="/pages/kids.html">Children</a>
                     </li>
                     <form class="d-flex" role="search">
-                        <input class="form-control me-2 " type="search" placeholder="Search" aria-label="Search">
+                        <input class="form-control  " type="search" placeholder="Search" aria-label="Search">
                         <img src="/img/search.png" height="36" width="36">
                     </form>
                     <div>
-                        <img src="/img/account.png" id="logo" height="55" width="55">
+                      <a href="/pages/signin.html"><img src="https://cdn-icons-png.flaticon.com/128/3177/3177440.png"class="account" height="40" width="40"></a>
                     </div>
-
+                   
                 </ul>
             </div>
         </div>
-    </nav>
+    </nav>  
 
 
     <!-- Sliding Panel -->
@@ -125,84 +237,163 @@
     <div class="container lh-2">
         <div class="product">
             <h3 class="mt-5">New to buy or rent</h3>
-            <div id="carouselExample" class="carousel slide">
+            <div id="carouselExample1" class="carousel slide">
                 <div class="carousel-inner">
                     <div class="carousel-item active ">
-
-                        <div class="row">
-                            <div class="col-lg-2 col-md-4 col-sm-6 mt-3 img-hover  ">
-
-                                <a href="https://play.google.com/store/movies/details/Elemental?id=dT6MlLDIUC0.P"><img
-                                        src="../img/movies/movie1.webp" onclick="movie()" width="200px"
-                                        class="m-2 img-fluid card" /></a>
-                                <div class="ms-3 mt-3 ">Spider-Man: Across The Spider-Verse</div>
-                                <div clas="d-flex ">
-                                    <span class="mx-2 text-body-secondary"> 4.2★</span>
-                                    <span class="text-secondary"><del>₹350.00</del></span>
-                                    <span class="text-secondary">₹250.00</span>
+                        <div class="container text-center">
+                            <div class="row">
+                                <div class="col-lg-2 col-md-4 col-sm-6 mt-3 img-hover  ">
+                                    
+                                   <img src="../img/movies/movie1.webp" onclick="movie()" width="200px"class="m-2 img-fluid card" />
+                                    <div class="ms-3 mt-3 ">Spider-Man: Across The Spider-Verse</div>
+                                    <div clas="d-flex ">
+                                        <span class="mx-2 text-body-secondary"> 4.2★</span>
+                                        <span class="text-secondary"><del>₹350.00</del></span>
+                                        <span class="text-secondary">₹250.00</span>
+                                    </div>
+    
                                 </div>
-
-                            </div>
-                            <div class="col-lg-2 col-md-4 col-sm-6 mt-3 img-hover  img-hover">
-
-                                <img src="../img/movies/movie2.webp" width="200px" class="m-2 img-fluid card" />
-                                <div class="ms-3 mt-3 ">Insidious: The Red Door</div>
-                                <div clas="d-flex">
-                                    <span class="mx-2 text-secondary ms-3">1.0★</span>
-                                    <span class="text-secondary">₹250.00</span>
+                                <div class="col-lg-2 col-md-4 col-sm-6 mt-3 img-hover  img-hover">
+    
+                                    <img src="../img/movies/movie2.webp" width="200px" class="m-2 img-fluid card" />
+                                    <div class="ms-3 mt-3 ">Insidious: The Red Door</div>
+                                    <div clas="d-flex">
+                                        <span class="mx-2 text-secondary ms-3">1.0★</span>
+                                        <span class="text-secondary">₹250.00</span>
+                                    </div>
+    
+    
                                 </div>
-
-
-                            </div>
-                            <div class="col-lg-2 col-md-4 col-sm-6 mt-3 img-hover  ">
-
-                                <img src="../img/movies/movie3.webp" width="200px" class="m-2 img-fluid card" />
-                                <div class="ms-3 mt-3 ">LElemental</div>
-                                <div clas="d-flex">
-                                    <span class="mx-2 text-secondary ms-3">3.0★</span>
-                                    <span class="text-secondary">₹690.00</span>
+                                <div class="col-lg-2 col-md-4 col-sm-6 mt-3 img-hover  ">
+    
+                                    <img src="../img/movies/movie3.webp" width="200px" class="m-2 img-fluid card" />
+                                    <div class="ms-3 mt-3 ">LElemental</div>
+                                    <div clas="d-flex">
+                                        <span class="mx-2 text-secondary ms-3">3.0★</span>
+                                        <span class="text-secondary">₹690.00</span>
+                                    </div>
+    
                                 </div>
-
-                            </div>
-                            <div class="col-lg-2 col-md-4 col-sm-6 mt-3 img-hover  ">
-
-                                <img src="../img/movies/movie4.webp" width="200px" class="m-2 img-fluid card" />
-                                <div class="ms-3 mt-3 ">Tera Lakshya : Cobweb</div>
-                                <div clas="d-flex">
-                                    <span class="mx-2 text-secondary ms-3">4.0★</span>
-                                    <span class="text-secondary">₹150.00</span>
+                                <div class="col-lg-2 col-md-4 col-sm-6 mt-3 img-hover  ">
+    
+                                    <img src="../img/movies/movie4.webp" width="200px" class="m-2 img-fluid card" />
+                                    <div class="ms-3 mt-3 ">Tera Lakshya : Cobweb</div>
+                                    <div clas="d-flex">
+                                        <span class="mx-2 text-secondary ms-3">4.0★</span>
+                                        <span class="text-secondary">₹150.00</span>
+                                    </div>
+    
                                 </div>
-
-                            </div>
-
-                            <div class="col-lg-2 col-md-4 col-sm-6 mt-3 img-hover  ">
-
-                                <img src="../img/movies/movie5.webp" width="200px" class="m-2 img-fluid card" />
-                                <div class="ms-3 mt-3">Single Shankarum Smartphone Simranum</div>
-                                <div clas="d-flex">
-                                    <span class="mx-2 text-secondary ms-3 ms-3">₹25.00</span>
+    
+                                <div class="col-lg-2 col-md-4 col-sm-6 mt-3 img-hover  ">
+    
+                                    <img src="../img/movies/movie5.webp" width="200px" class="m-2 img-fluid card" />
+                                    <div class="ms-3 mt-3">Single Shankarum Smartphone Simranum</div>
+                                    <div clas="d-flex">
+                                        <span class="mx-2 text-secondary ms-3 ms-3">₹25.00</span>
+                                    </div>
+    
                                 </div>
-
-                            </div>
-                            <div class="col-lg-2 col-md-4 col-sm-6 mt-3 img-hover  ">
-
-                                <img src="../img/movies/movie6.webp" width="200px" class="m-2  img-fluid card" />
-                                <div class="ms-3 mt-3 ">Fast X</div>
-                                <div clas="d-flex">
-                                    <span class="mx-2 text-secondary ms-3">4.2★</span>
-                                    <span class="text-secondary">₹180.00</span>
+                                <div class="col-lg-2 col-md-4 col-sm-6 mt-3 img-hover  ">
+    
+                                    <img src="../img/movies/movie6.webp" width="200px" class="m-2  img-fluid card" />
+                                    <div class="ms-3 mt-3 ">Fast X</div>
+                                    <div clas="d-flex">
+                                        <span class="mx-2 text-secondary ms-3">4.2★</span>
+                                        <span class="text-secondary">₹180.00</span>
+                                    </div>
+    
                                 </div>
-
+                                
+    
                             </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
 
+                        <div class="container text-center">
+                            <div class="row">
+                                <div class="col-lg-2 col-md-4 col-sm-6 mt-3 img-hover  ">
+                                    
+                                   <img src="../img/movies/t5.webp" onclick="movie()" width="200px"class="m-2 img-fluid card" />
+                                    <div class="ms-3 mt-3 ">Spider-Man: Across The Spider-Verse</div>
+                                    <div clas="d-flex ">
+                                        <span class="mx-2 text-body-secondary"> 4.2★</span>
+                                        <span class="text-secondary"><del>₹350.00</del></span>
+                                        <span class="text-secondary">₹250.00</span>
+                                    </div>
+    
+                                </div>
+                                <div class="col-lg-2 col-md-4 col-sm-6 mt-3 img-hover  img-hover">
+    
+                                    <img src="../img/movies/t6.webp" width="200px" class="m-2 img-fluid card" />
+                                    <div class="ms-3 mt-3 ">Insidious: The Red Door</div>
+                                    <div clas="d-flex">
+                                        <span class="mx-2 text-secondary ms-3">1.0★</span>
+                                        <span class="text-secondary">₹250.00</span>
+                                    </div>
+    
+    
+                                </div>
+                                <div class="col-lg-2 col-md-4 col-sm-6 mt-3 img-hover  ">
+    
+                                    <img src="../img/movies/movie1.webp" width="200px" class="m-2 img-fluid card" />
+                                    <div class="ms-3 mt-3 ">LElemental</div>
+                                    <div clas="d-flex">
+                                        <span class="mx-2 text-secondary ms-3">3.0★</span>
+                                        <span class="text-secondary">₹690.00</span>
+                                    </div>
+    
+                                </div>
+                                <div class="col-lg-2 col-md-4 col-sm-6 mt-3 img-hover  ">
+    
+                                    <img src="../img/movies/t5.webp" width="200px" class="m-2 img-fluid card" />
+                                    <div class="ms-3 mt-3 ">Tera Lakshya : Cobweb</div>
+                                    <div clas="d-flex">
+                                        <span class="mx-2 text-secondary ms-3">4.0★</span>
+                                        <span class="text-secondary">₹150.00</span>
+                                    </div>
+    
+                                </div>
+    
+                                <div class="col-lg-2 col-md-4 col-sm-6 mt-3 img-hover  ">
+    
+                                    <img src="../img/movies/movie1.webp" width="200px" class="m-2 img-fluid card" />
+                                    <div class="ms-3 mt-3">Single Shankarum Smartphone Simranum</div>
+                                    <div clas="d-flex">
+                                        <span class="mx-2 text-secondary ms-3 ms-3">₹25.00</span>
+                                    </div>
+    
+                                </div>
+                                <div class="col-lg-2 col-md-4 col-sm-6 mt-3 img-hover  ">
+    
+                                    <img src="../img/movies/movie2.webp" width="200px" class="m-2  img-fluid card" />
+                                    <div class="ms-3 mt-3 ">Fast X</div>
+                                    <div clas="d-flex">
+                                        <span class="mx-2 text-secondary ms-3">4.2★</span>
+                                        <span class="text-secondary">₹180.00</span>
+                                    </div>
+    
+                                </div>
+                                
+    
+                            </div>
                         </div>
                     </div>
                 </div>
-
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample1" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample1" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+               
             </div>
             <h3 class="mt-5">Top selling</h3>
             <p>Most popular on Google TV</p>
-            <div id="carouselExample" class="carousel slide">
+            <div id="carouselExample2" class="carousel slide">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="row">
@@ -263,10 +454,89 @@
 
                         </div>
                     </div>
+                    <div class="carousel-item">
+                        <div class="container text-center">
+                            <div class="row">
+                                <div class="col-lg-2 col-md-4 col-sm-6 mt-3 img-hover  ">
+                                    
+                                   <img src="../img/movies/movie1.webp" onclick="movie()" width="200px"class="m-2 img-fluid card" />
+                                    <div class="ms-3 mt-3 ">Spider-Man: Across The Spider-Verse</div>
+                                    <div clas="d-flex ">
+                                        <span class="mx-2 text-body-secondary"> 4.2★</span>
+                                        <span class="text-secondary"><del>₹350.00</del></span>
+                                        <span class="text-secondary">₹250.00</span>
+                                    </div>
+    
+                                </div>
+                                <div class="col-lg-2 col-md-4 col-sm-6 mt-3 img-hover  img-hover">
+    
+                                    <img src="../img/movies/movie2.webp" width="200px" class="m-2 img-fluid card" />
+                                    <div class="ms-3 mt-3 ">Insidious: The Red Door</div>
+                                    <div clas="d-flex">
+                                        <span class="mx-2 text-secondary ms-3">1.0★</span>
+                                        <span class="text-secondary">₹250.00</span>
+                                    </div>
+    
+    
+                                </div>
+                                <div class="col-lg-2 col-md-4 col-sm-6 mt-3 img-hover  ">
+    
+                                    <img src="../img/movies/movie3.webp" width="200px" class="m-2 img-fluid card" />
+                                    <div class="ms-3 mt-3 ">LElemental</div>
+                                    <div clas="d-flex">
+                                        <span class="mx-2 text-secondary ms-3">3.0★</span>
+                                        <span class="text-secondary">₹690.00</span>
+                                    </div>
+    
+                                </div>
+                                <div class="col-lg-2 col-md-4 col-sm-6 mt-3 img-hover  ">
+    
+                                    <img src="../img/movies/movie4.webp" width="200px" class="m-2 img-fluid card" />
+                                    <div class="ms-3 mt-3 ">Tera Lakshya : Cobweb</div>
+                                    <div clas="d-flex">
+                                        <span class="mx-2 text-secondary ms-3">4.0★</span>
+                                        <span class="text-secondary">₹150.00</span>
+                                    </div>
+    
+                                </div>
+    
+                                <div class="col-lg-2 col-md-4 col-sm-6 mt-3 img-hover  ">
+    
+                                    <img src="../img/movies/movie5.webp" width="200px" class="m-2 img-fluid card" />
+                                    <div class="ms-3 mt-3">Single Shankarum Smartphone Simranum</div>
+                                    <div clas="d-flex">
+                                        <span class="mx-2 text-secondary ms-3 ms-3">₹25.00</span>
+                                    </div>
+    
+                                </div>
+                                <div class="col-lg-2 col-md-4 col-sm-6 mt-3 img-hover  ">
+    
+                                    <img src="../img/movies/movie6.webp" width="200px" class="m-2  img-fluid card" />
+                                    <div class="ms-3 mt-3 ">Fast X</div>
+                                    <div clas="d-flex">
+                                        <span class="mx-2 text-secondary ms-3">4.2★</span>
+                                        <span class="text-secondary">₹180.00</span>
+                                    </div>
+    
+                                </div>
+                                
+    
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample2" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample2" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
             </div>
             <h3 class="mt-5">New to Rent</h3>
-            <div id="carouselExample" class="carousel slide">
+            <div id="carouselExample3" class="carousel slide">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="row">
@@ -330,6 +600,85 @@
 
                         </div>
                     </div>
+                    <div class="carousel-item">
+
+                        <div class="container text-center">
+                            <div class="row">
+                                <div class="col-lg-2 col-md-4 col-sm-6 mt-3 img-hover  ">
+                                    
+                                   <img src="../img/movies/t5.webp" onclick="movie()" width="200px"class="m-2 img-fluid card" />
+                                    <div class="ms-3 mt-3 ">Spider-Man: Across The Spider-Verse</div>
+                                    <div clas="d-flex ">
+                                        <span class="mx-2 text-body-secondary"> 4.2★</span>
+                                        <span class="text-secondary"><del>₹350.00</del></span>
+                                        <span class="text-secondary">₹250.00</span>
+                                    </div>
+    
+                                </div>
+                                <div class="col-lg-2 col-md-4 col-sm-6 mt-3 img-hover  img-hover">
+    
+                                    <img src="../img/movies/t6.webp" width="200px" class="m-2 img-fluid card" />
+                                    <div class="ms-3 mt-3 ">Insidious: The Red Door</div>
+                                    <div clas="d-flex">
+                                        <span class="mx-2 text-secondary ms-3">1.0★</span>
+                                        <span class="text-secondary">₹250.00</span>
+                                    </div>
+    
+    
+                                </div>
+                                <div class="col-lg-2 col-md-4 col-sm-6 mt-3 img-hover  ">
+    
+                                    <img src="../img/movies/movie1.webp" width="200px" class="m-2 img-fluid card" />
+                                    <div class="ms-3 mt-3 ">LElemental</div>
+                                    <div clas="d-flex">
+                                        <span class="mx-2 text-secondary ms-3">3.0★</span>
+                                        <span class="text-secondary">₹690.00</span>
+                                    </div>
+    
+                                </div>
+                                <div class="col-lg-2 col-md-4 col-sm-6 mt-3 img-hover  ">
+    
+                                    <img src="../img/movies/t5.webp" width="200px" class="m-2 img-fluid card" />
+                                    <div class="ms-3 mt-3 ">Tera Lakshya : Cobweb</div>
+                                    <div clas="d-flex">
+                                        <span class="mx-2 text-secondary ms-3">4.0★</span>
+                                        <span class="text-secondary">₹150.00</span>
+                                    </div>
+    
+                                </div>
+    
+                                <div class="col-lg-2 col-md-4 col-sm-6 mt-3 img-hover  ">
+    
+                                    <img src="../img/movies/movie1.webp" width="200px" class="m-2 img-fluid card" />
+                                    <div class="ms-3 mt-3">Single Shankarum Smartphone Simranum</div>
+                                    <div clas="d-flex">
+                                        <span class="mx-2 text-secondary ms-3 ms-3">₹25.00</span>
+                                    </div>
+    
+                                </div>
+                                <div class="col-lg-2 col-md-4 col-sm-6 mt-3 img-hover  ">
+    
+                                    <img src="../img/movies/movie2.webp" width="200px" class="m-2  img-fluid card" />
+                                    <div class="ms-3 mt-3 ">Fast X</div>
+                                    <div clas="d-flex">
+                                        <span class="mx-2 text-secondary ms-3">4.2★</span>
+                                        <span class="text-secondary">₹180.00</span>
+                                    </div>
+    
+                                </div>
+                                
+    
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample3" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                      </button>
+                      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample3" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                      </button>
                 </div>
             </div>
         </div>
@@ -338,11 +687,53 @@
     <hr class="m-5">
     <!-- Footer -->
 
-    <div class="footer m-5">
-        <div >
-            
+    <footer class="mainfooter" role="contentinfo">
+        <div class="footer-middle">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3 col-sm-6">
+              <!--Column1-->
+              <div class="footer-pad">
+                <h4>Google Play</h4>
+                <ul class="list-unstyled">
+                  <li><a href="#">Play Pass</a></li>
+                  <li><a href="#">Play Points</a></li>
+                  <li><a href="#">Gift Card</a></li>
+                  <li><a href="#">Redeem</a></li>
+                  <li><a href="#">Refund Policy</a></li>
+                  <li><a href="#">FAQs</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <!--Column1-->
+              <div class="footer-pad">
+                <h4>Children and Family</h4>
+                <ul class="list-unstyled">
+                  <li><a href="#">Parent guide</a></li>
+                  <li><a href="#">Family sharing</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <img src="/img/back playstore.png" class="blackplay" width="260" height="170" >
+            </div>
+          </div>
+        <div class="row">
+          <div class="col-md-12 copy">
+            <p class="text-center ">
+              <a href="#">Terms of service</a>
+                <a href="#">Policy</a>
+                <a href="#">About Google Play</a>
+                <a href="#">Developers</a>
+                <a href="#">Google Store</a>
+                <a href="#">Allprices include GST.</a>
+            </p>
+          </div>
         </div>
-    </div>
+      </div>
+        </div>
+      </footer>
 
 </body>
 
