@@ -68,7 +68,7 @@ Google has redesigned Google Play's interface on several occasions. In February 
 
 Have questions or feedback? We'd love to hear from you!
   
-- Website: [www.yourwebsite.com](https://www.googleplay.com)
+- Website: [www.google.com](https://www.googleplay.com)
 
 ## Privacy Policy
 
